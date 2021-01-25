@@ -10,7 +10,7 @@ public class Consumator implements Runnable {
     @Override
     public void run() {
         try {
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < 30; i++) {
                 System.out.println("Consumator: " + tablou.citeste());
                 Thread.sleep(Math.abs(new Random().nextLong()) % 100);
             }

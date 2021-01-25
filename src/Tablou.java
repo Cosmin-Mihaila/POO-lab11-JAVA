@@ -29,7 +29,7 @@ public class Tablou {
 
     Integer citeste() {
         lock.lock();
-        Integer out = -1;
+        Integer out = 0;
 
         try {
             while (lista != null && lista.size() == 0) {
