@@ -29,14 +29,14 @@ public class Tablou {
 
     Integer citeste() {
         lock.lock();
-        Integer out = 0;
+        Integer intOut = 0;
 
         try {
             while (lista != null && lista.size() == 0) {
                 neVid.await();
             }
             assert null != lista;
-            out = lista.remove();
+            intOut = lista.remove();
             nePlin.signal();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -44,6 +44,6 @@ public class Tablou {
             lock.unlock();
         }
 
-        return out;
+        return intOut;
     }
 }
