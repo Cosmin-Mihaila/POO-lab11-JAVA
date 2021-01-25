@@ -35,6 +35,7 @@ public class Tablou {
             while (lista != null && lista.size() == 0) {
                 neVid.await();
             }
+            assert null != lista;
             out = lista.remove();
             nePlin.signal();
         } catch (InterruptedException e) {
